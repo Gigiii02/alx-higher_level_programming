@@ -1,4 +1,5 @@
 #include <Python.h>
+
 void print_python_list(PyObject *p);
 void print_python_bytes(PyObject *p);
 
@@ -30,7 +31,7 @@ void print_python_list(PyObject *p)
 }
 
 /**
- * print_python_bytes - Prints basic info about Pytho byte objects
+ * print_python_bytes - Prints basic info about Python byte objects.
  * @p: A PyObject byte object
  */
 void print_python_bytes(PyObject *p)
@@ -45,7 +46,7 @@ void print_python_bytes(PyObject *p)
 		return;
 	}
 
-	printf(" size: %1d\n", ((PyVarObject *)p)->ob_size);
+	printf(" size: %ld\n", ((PyVarObject *)p)->ob_size);
 	printf(" trying string: %s\n", bytes->ob_sval);
 
 	if (((PyVarObject *)p)->ob_size > 10)
