@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-def number_keys(a_dictionary):
-    return len(a_dictionary)
+def print_sorted_dictionary(a_dictionary):
+    for k in sorted(a_dictionary.keys()):
+        print("{}: {}".format(k, a_dictionary[k]))
